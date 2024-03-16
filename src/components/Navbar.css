@@ -1,0 +1,12 @@
+.navbar {
+	height: 56px;
+}
+
+.navbar h1 {
+	color: red;
+	margin: 0;
+}
+
+.navbar button {
+	font-weight: bold;
+}

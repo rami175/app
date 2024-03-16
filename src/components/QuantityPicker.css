@@ -1,0 +1,9 @@
+.qpicker {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.qpicker div {
+	border: solid 1px black;
+	width: 20px;
+}
