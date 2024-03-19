@@ -6,7 +6,7 @@
 	width: 300px;
 	height: 380px;
 	border-radius: 4px;
-	margin: 0 7px 12px 0;
+	margin: 10px 7px 12px 0;
 }
 .product h6,
 img {
@@ -14,4 +14,13 @@ img {
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 	margin: 5px;
+}
+.product img {
+	width: auto;
+	height: 70%;
+	border-radius: 3px;
+}
+.button {
+	display: flex;
+	justify-content: space-around;
 }

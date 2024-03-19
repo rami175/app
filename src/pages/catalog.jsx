@@ -7,38 +7,36 @@ function Catalog() {
 			title: "Wings",
 			price: 10.99,
 			category: "Hot",
-			img: "./imges/wings",
+			img: "wings.jpg",
 			_id: "1",
 		},
 		{
-			title: "Pizza",
+			title: "Pizza.jpg",
 			price: 12.99,
 			category: "Hot",
-			img: "https://picsum.photos/200",
+			img: "pizza.jpg",
 			_id: "2",
 		},
 		{
 			title: "Salad",
 			price: 8.99,
 			category: "Cold",
-			img: "https://picsum.photos/200",
+			img: "salad.jpg",
 			_id: "3",
 		},
 		{
 			title: "Drinks",
 			price: 3.99,
 			category: "cold",
-			img: "https://picsum.photos/200",
+			img: "drink.jpg",
 			_id: "4",
 		},
 	];
 	return (
 		<div className='catalog page'>
-			<h1>Our amazing catalog</h1>
-			<Product info={data[0]} />
-			<Product info={data[1]} />
-			<Product info={data[2]} />
-			<Product info={data[3]} />
+			{data.map((prod) => (
+				<Product key={prod.id} info={prod} />
+			))}
 		</div>
 	);
 }
