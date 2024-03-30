@@ -11,7 +11,7 @@ function Catalog() {
 			_id: "1",
 		},
 		{
-			title: "Pizza.jpg",
+			title: "Pizza",
 			price: 12.99,
 			category: "Hot",
 			img: "pizza.jpg",
@@ -35,7 +35,7 @@ function Catalog() {
 	return (
 		<div className='catalog page'>
 			{data.map((prod) => (
-				<Product key={prod.id} info={prod} />
+				<Product key={prod._id} info={prod} />
 			))}
 		</div>
 	);

@@ -1,17 +1,19 @@
 import "./QuantityPicker.css";
 import { useState } from "react";
 
-function QuantityPicker() {
-	const [quantity, setQuantity] = useState(1);
+function QuantityPicker({ setcount }) {
+	const [quantity, setQuantity] = useState(0);
 
 	function increase() {
 		let newVal = quantity + 1;
 		setQuantity(newVal);
+		setcount(newVal);
 	}
 	function decrease() {
 		let newVal = quantity - 1;
 		if (newVal >= 0) {
 			setQuantity(newVal);
+			setcount(newVal);
 		}
 	}
 
@@ -24,7 +26,7 @@ function QuantityPicker() {
 			>
 				-
 			</button>
-			<lable>{quantity}</lable>
+			<span>{quantity}</span>
 			<button className='btn btn-sm btn-outline-success' onClick={increase}>
 				+
 			</button>
