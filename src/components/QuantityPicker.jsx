@@ -16,19 +16,31 @@ function QuantityPicker({ setcount }) {
 			setcount(newVal);
 		}
 	}
+	function add() {
+		setQuantity(0);
+		setcount(0);
+	}
 
 	return (
-		<div className='qpicker'>
-			<button
-				className='btn btn-sm btn-outline-success'
-				disabled={quantity == 0}
-				onClick={decrease}
-			>
-				-
-			</button>
-			<span>{quantity}</span>
-			<button className='btn btn-sm btn-outline-success' onClick={increase}>
-				+
+		<div className='picker1'>
+			<div className='qpicker'>
+				<button
+					className='btn btn-sm btn-outline-success'
+					disabled={quantity == 0}
+					onClick={decrease}
+				>
+					-
+				</button>
+				<span>{quantity}</span>
+				<button
+					className='btn btn-sm btn-outline-success'
+					onClick={increase}
+				>
+					+
+				</button>
+			</div>
+			<button onClick={add} className='btn btn-dark' hidden={quantity == 0}>
+				Add to cart
 			</button>
 		</div>
 	);

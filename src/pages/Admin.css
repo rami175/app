@@ -1,0 +1,15 @@
+.admin {
+	color: darkcyan;
+}
+
+.admin .parent {
+	display: flex;
+}
+.admin .products {
+	background-color: rgb(211, 252, 185);
+	flex: 2;
+}
+.admin .coupons {
+	background-color: rgb(206, 160, 228);
+	flex: 1;
+}

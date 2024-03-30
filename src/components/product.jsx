@@ -6,23 +6,16 @@ import { useState } from "react";
 
 function Product(props) {
 	const [pcount, setcount] = useState(0);
-	function add() {
-		console.log("added ");
-		// QuantityPicker(0);
-		// setcount(0);
-		// // setQuantity(0)
-	}
+
 	return (
 		<div className='product'>
 			<img src={constants.IMAGE_PATH + props.info.img} />
-			<h6>{props.info.title}</h6>
-			<span>Price: ${props.info.price * pcount}</span>
-			<div className='button'>
-				<QuantityPicker setcount={setcount}></QuantityPicker>
-				<button onClick={add} className='btn btn-dark'>
-					Add to cart
-				</button>
+			<div className='title-box'>
+				<h6>{props.info.title}</h6>
+				<h7>(${props.info.price})</h7>
 			</div>
+			<span>Price: ${props.info.price * pcount}</span>
+			<QuantityPicker setcount={setcount}></QuantityPicker>
 		</div>
 	);
 }

@@ -1,12 +1,17 @@
 .qpicker {
 	display: flex;
 	justify-content: center;
-	margin-top: 5px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	/* margin-bottom: 10px; */
 }
 .qpicker div {
 	border: solid 1px black;
 	width: 20px;
 }
 .qpicker button {
-	margin: 0 5px;
+	margin: 0 10px;
+}
+.picker1 {
+	margin-top: 10px;
 }

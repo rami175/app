@@ -1,0 +1,9 @@
+.shopping-list {
+	background-color: rgb(133, 194, 238);
+	padding: 10px;
+}
+.shopping-list .shopping-form {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
