@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import DataContext from "../Context/dataContext";
+import { useContext } from "react";
+import "bootstrap/js/src/collapse.js";
 
 /**
  * Components:
@@ -11,13 +14,14 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+	const cart = useContext(DataContext).cart;
 	return (
 		<nav
 			className='navbar navbar-expand-lg bg-body-tertiary'
 			data-bs-theme='dark'
 		>
 			<div className='container-fluid'>
-				<Link class='navbar-brand' to='/home'>
+				<Link className='navbar-brand' to='/home'>
 					Home
 				</Link>
 				<button
@@ -50,17 +54,9 @@ function Navbar() {
 			</div>
 			<nav className='navbar bg-body-tertiary'>
 				<div className='container-fluid'>
-					<form className='d-flex' role='search'>
-						<input
-							className='form-control me-2'
-							type='search'
-							placeholder='Search'
-							aria-label='Search'
-						/>
-						<button className='btn btn-outline-success' type='submit'>
-							Search
-						</button>
-					</form>
+					<button className='btn btn-outline-success' type='button'>
+						{cart.length} Cart
+					</button>
 				</div>
 			</nav>
 		</nav>

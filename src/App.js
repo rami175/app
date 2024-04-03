@@ -9,24 +9,27 @@ import ShoppingList from "./pages/ShoppingList";
 import Home from "./pages/home";
 import Admin from "./pages/Admin";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GlobalProvider from "./Context/GobalProvider";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<div className='App'>
-				<Navbar />
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/home' element={<Home />} />
-					<Route path='/catalog' element={<Catalog />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/shoppinglist' element={<ShoppingList />} />
-					<Route path='/admin' element={<Admin />} />
-				</Routes>
+		<GlobalProvider>
+			<BrowserRouter>
+				<div className='App'>
+					<Navbar />
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/home' element={<Home />} />
+						<Route path='/catalog' element={<Catalog />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/shoppinglist' element={<ShoppingList />} />
+						<Route path='/admin' element={<Admin />} />
+					</Routes>
 
-				<Footer></Footer>
-			</div>
-		</BrowserRouter>
+					<Footer></Footer>
+				</div>
+			</BrowserRouter>
+		</GlobalProvider>
 	);
 }
 
